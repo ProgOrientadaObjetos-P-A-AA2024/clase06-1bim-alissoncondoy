@@ -13,12 +13,12 @@ import paquete2.Profesor;
  *
  * @author reroes
  */
-public class ManejoArrayList3 {
+public class ManejoArrayList6 {
     public static void main(String[] args) {
         
         Calificacion c1 = new Calificacion(10, "Base de Datos");
-        Calificacion c2 = new Calificacion(9, "Matemáticas");
-        Calificacion c3 = new Calificacion(7, "Lógica");
+        Calificacion c2 = new Calificacion(9, "Matematicas");
+        Calificacion c3 = new Calificacion(7, "Logica");
         
         Profesor prof1 = new Profesor("Joseph Jimenez", "facturado");
         Profesor prof2 = new Profesor("David Jones", "nombramiento");
@@ -36,12 +36,10 @@ public class ManejoArrayList3 {
         calificaciones.add(c3);
         
         for (int i = 0; i < calificaciones.size(); i++) {
-            System.out.printf("%s - %s - %.2f\n", 
-                    calificaciones.get(i).obtenerProfesor().obtenerNombre(), 
-                    calificaciones.get(i).obtenerNombreMateria(),
-                    calificaciones.get(i).obtenerNota());
+            System.out.printf("%s", 
+                    calificaciones.get(i));
             
-            //
+            
         }
         
         
