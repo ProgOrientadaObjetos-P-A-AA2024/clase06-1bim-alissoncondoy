@@ -14,7 +14,13 @@ public class Computador {
    private Memoria memoria;
    private double costoComputador;
    
-    public void establecerMarca(String x){
+    public Computador(String m, Procesador p, Memoria a){
+        marca = m;
+        procesador = p;
+        memoria = a;
+    }
+   
+   public void establecerMarca(String x){
        marca = x;
     }
    
