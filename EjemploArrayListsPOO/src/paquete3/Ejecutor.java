@@ -6,14 +6,16 @@ package paquete3;
 import java.util.Scanner;
 import java.util.Arrays;
 
+
 /**
  *
  * @author utpl
  */
 public class Ejecutor {
     public static void main(String[] args) {
-         Scanner entrada = new Scanner(System.in);
-
+        Scanner entrada = new Scanner(System.in);
+         
+        
         
     }
 }

@@ -3,9 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package paquete3;
-
 import java.util.ArrayList;
-
+import paquete3.Computador;
+import paquete3.Ejecutor;
 /**
  *
  * @author reroes

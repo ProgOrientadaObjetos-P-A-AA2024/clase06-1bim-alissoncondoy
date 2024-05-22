@@ -1,25 +1,24 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package paquete3;
+package paquete4;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Scanner;
-
 import java.util.ArrayList;
 import java.util.Arrays;
-import paquete1.Calificacion;
-import paquete1.Profesor;
+import java.util.Scanner;
 
+/**
+ *
+ * @author utpl
+ */
 public class ArchivoLectura {
-
     private Scanner entrada;
     private String nombreArchivo;
     private String rutaArchivo;
-    private ArrayList<Calificacion> lista;
+    private ArrayList<Empresa> lista;
 
     public ArchivoLectura(String n) {
         nombreArchivo = n;
@@ -73,30 +72,18 @@ public class ArchivoLectura {
                 //       0             1                2
                 // los dos primeros parametros se los relaciona
                 // con materia y nota
-                String materia = linea_partes.get(0);
-                double nota = Double.parseDouble(linea_partes.
-                        //* Conierte la cadena en double
-                        get(1).replace(",", ".")); //* remplaza la coma por el punto
-                String profesor = linea_partes.get(2);
+                String nombre = linea_partes.get(0);
+                String ciudad = linea_partes.get(1);
+                       
 
-                ArrayList<String> cadenaProfesor = new ArrayList<>(
-                        Arrays.asList(profesor.split("\\|")));
-                //*El( //)nos permite un escape para separar 
-                // ["Tara Hernandez", "contratado"]
-                //        0                 1
-
-                Profesor p = new Profesor(cadenaProfesor.get(0),
-                        cadenaProfesor.get(1));
-
-                Calificacion cal = new Calificacion(nota, materia);
-                cal.establecerProfesor(p);
+                Empresa cal = new Empresa(nombre, ciudad);
                 lista.add(cal);
 
             } // fin de while
         }
     }
 
-    public ArrayList<Calificacion> obtenerLista() {
+    public ArrayList<Empresa> obtenerLista() {
 
         return lista;
     }
@@ -110,17 +97,18 @@ public class ArchivoLectura {
 
     @Override
     public String toString() {
-        String cadena = "Lista Calificaciones\n";
+        String cadena = "Lista Empresa\n";
 
         for (int i = 0; i < obtenerLista().size(); i++) {
-            cadena = String.format("%s(%d) %s %.2f (%s %s)\n", cadena,
+            cadena = String.format("%s %s %s %s\n", cadena,
                     i + 1,
-                    obtenerLista().get(i).obtenerNombreMateria(),
-                    obtenerLista().get(i).obtenerNota(),
-                    obtenerLista().get(i).obtenerProfesor().obtenerNombre(),
-                    obtenerLista().get(i).obtenerProfesor().obtenerTipo());
+                    obtenerLista().get(i).obtenerNombre(),
+                    obtenerLista().get(i).obtenerCiudad());
         }
 
         return cadena;
     }
 }
+
+    
+

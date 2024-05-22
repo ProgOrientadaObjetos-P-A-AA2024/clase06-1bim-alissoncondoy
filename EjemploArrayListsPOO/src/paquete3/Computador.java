@@ -45,4 +45,8 @@ public class Computador {
     public double obtenerCostoComputador(){
         return costoComputador;
     }
+    
+    public String toString(){
+        String cadena = String.format("%s\n")
+    }
 }

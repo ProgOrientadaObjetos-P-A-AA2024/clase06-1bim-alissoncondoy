@@ -66,6 +66,9 @@ public class ArchivoLectura {
 
                 ArrayList<String> linea_partes = new ArrayList<>(
                         Arrays.asList(linea.split(";")) // ["Tara Hernandez", "contratado"]
+                        //*Esto divide la cadena linea en partes usando ; como separador
+                        
+                       
                 );
                 Profesor p = new Profesor(linea_partes.get(0), // Tara Hernandez
                         linea_partes.get(1) // contratado
